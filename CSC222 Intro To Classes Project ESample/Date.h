@@ -18,6 +18,8 @@ public:
 	
 	int lastDay() const;
 	int lastDay(int month, int year) const;
+	
+	void setDate(int m, int d, int y);
 private:
 	int month;
 	int day;
