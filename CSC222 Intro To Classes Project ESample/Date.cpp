@@ -9,7 +9,7 @@ Date::Date(int m, int d, int y)
 }
 void Date::setDate(int m, int d, int y)
 {
-	if (m < 1 || m > 12 || d < 1 || d < lastDay() || y < 1 || y > 9999)
+	if (m < 1 || m > 12 || d < 1 || d > lastDay() || y < 1 || y > 9999)
 	{
 		month = 1;
 		day = 1;
