@@ -39,13 +39,13 @@ int Date::lastDay(int month, int year) const
 {
 	if (month == 2)
 	{
-		if (!isLeapYear())
-		{
-			return 28;
-		}
-		else
+		if (isLeapYear(year))
 		{
 			return 29;
+		}
+		else 
+		{
+			return 28;
 		}
 	}
 	else if (month == 4 || month == 6 || month == 9 || month == 11)
@@ -59,13 +59,13 @@ int Date::lastDay(int month, int year) const
 }
 bool Date::isLeapYear() const
 {
-	if (!isLeapYear(year))
+	if (isLeapYear(year))
 	{
-		return false;
+		return true;
 	}
 	else
 	{
-		return true;
+		return false;
 	}
 	;
 

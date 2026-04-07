@@ -125,8 +125,8 @@ int main()
 	cout << "lastDay(2, 2024): " << d9.lastDay(2, 2024) << endl;
 	cout << "lastDay(2, 2023): " << d9.lastDay(2, 2023) << endl;
 	cout << "lastDay(4, 2025): " << d9.lastDay(4, 2025) << endl;
-	cout << "lastDay(12, 2025): " << d9.lastDay(2, 1700) << endl;
-	cout << "lastDay(12, 2025): " << d9.lastDay(2, 1600) << endl;
+	cout << "lastDay(2, 1700): " << d9.lastDay(2, 1700) << endl;
+	cout << "lastDay(2, 1600): " << d9.lastDay(2, 1600) << endl;
 	cout << "lastDay(12, 2025): " << d9.lastDay(12, 2025) << endl;
 	
 	return 0;
