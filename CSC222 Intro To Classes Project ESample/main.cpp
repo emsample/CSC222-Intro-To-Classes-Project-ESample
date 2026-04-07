@@ -87,28 +87,28 @@ int main()
 	cout << "Month: " << d2.getMonth() << endl;
 	cout << "Day: " << d2.getDay() << endl;
 	cout << "Year: " << d2.getYear() << endl << endl;
-	cout << "Valid date:\n" << d2.dateFormat() << endl << endl;
+	cout << "Invalid date:\n" << d2.dateFormat() << endl << endl;
 
 	cout << "Invalid Date 13/31/2002" << endl;
 	d2.setDate(13, 31, 2002);
 	cout << "Month: " << d2.getMonth() << endl;
 	cout << "Day: " << d2.getDay() << endl;
 	cout << "Year: " << d2.getYear() << endl << endl;
-	cout << "Valid date:\n" << d2.dateFormat() << endl << endl;
+	cout << "Invalid date:\n" << d2.dateFormat() << endl << endl;
 
 	cout << "Invalid Date 2/31/2000" << endl;
 	d2.setDate(2, 31, 2000);
 	cout << "Month: " << d2.getMonth() << endl;
 	cout << "Day: " << d2.getDay() << endl;
 	cout << "Year: " << d2.getYear() << endl << endl;
-	cout << "Valid date:\n" << d2.dateFormat() << endl << endl;
+	cout << "Invalid date:\n" << d2.dateFormat() << endl << endl;
 
 	cout << "Invalid Date 9/37/2000" << endl;
 	d2.setDate(9, 37, 2000);
 	cout << "Month: " << d2.getMonth() << endl;
 	cout << "Day: " << d2.getDay() << endl;
 	cout << "Year: " << d2.getYear() << endl << endl;
-	cout << "Valid date:\n" << d2.dateFormat() << endl << endl;
+	cout << "Invalid date:\n" << d2.dateFormat() << endl << endl;
 
 	cout << "Invalid date 2/29/1900" << endl;
 	d2.setDate(2, 29, 1900);
