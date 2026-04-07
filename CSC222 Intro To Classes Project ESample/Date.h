@@ -21,7 +21,7 @@ public:
 	
 	void setDate(int m, int d, int y);
 
-	string dateFormat(int month, int day, int year);
+	string dateFormat() const;
 private:
 	int month;
 	int day;

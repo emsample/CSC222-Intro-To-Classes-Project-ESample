@@ -68,7 +68,7 @@ bool Date::isLeapYear(int year) const
 	else
 		return false;
 }
-string Date::dateFormat(int month, int day, int year)
+string Date::dateFormat() const
 {
 	string monthname[12] = { "January", "February", "March", "April",
 		"May", "June", "July", "August",
