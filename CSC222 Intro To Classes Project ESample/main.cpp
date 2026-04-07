@@ -21,75 +21,102 @@ int main()
 
 	//Inpute tests
 	cout << "constructor tests\n" << endl;
-	cout << "Date 1 default state:\n" << d1.dateFormat() << endl << "Leap year: " << (d1.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d1.lastDay() << endl << endl;
+	cout << "Date 1 default state:\n" << d1.dateFormat() << endl << "Leap year: " << (d1.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d1.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #1" << endl;
 	cout << "Month: " << d1.getMonth() << endl;
 	cout << "Day: " << d1.getDay() << endl;
 	cout << "Year: " << d1.getYear() << endl << endl;
-	cout << "Date 2 valid date:\n" << d2.dateFormat() << endl << "Leap year: " << (d2.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d2.lastDay() << endl << endl;
+	cout << "Date 2 valid date:\n" << d2.dateFormat() << endl << "Leap year: " << (d2.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d2.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #2" << endl;
 	cout << "Month: " << d2.getMonth() << endl;
 	cout << "Day: " << d2.getDay() << endl;
 	cout << "Year: " << d2.getYear() << endl << endl;
-	cout << "Date 3 valid date:\n" << d3.dateFormat() << endl << "Leap year: " << (d3.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d3.lastDay() << endl << endl;
+	cout << "Date 3 valid date:\n" << d3.dateFormat() << endl << "Leap year: " << (d3.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d3.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #3" << endl;
 	cout << "Month: " << d3.getMonth() << endl;
 	cout << "Day: " << d3.getDay() << endl;
 	cout << "Year: " << d3.getYear() << endl << endl;
-	cout << "Date 4 valid leap:\n" << d4.dateFormat() << endl << "Leap year: " << (d4.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d4.lastDay() << endl << endl;
+	cout << "Date 4 valid leap:\n" << d4.dateFormat() << endl << "Leap year: " << (d4.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d4.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #4" << endl;
 	cout << "Month: " << d4.getMonth() << endl;
 	cout << "Day: " << d4.getDay() << endl;
 	cout << "Year: " << d4.getYear() << endl << endl;
-	cout << "Date 5 invalid month:\n" << d5.dateFormat() << endl << "Leap year: " << (d5.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d5.lastDay() << endl << endl;
+	cout << "Date 5 invalid month 13/23/1963:\n" << d5.dateFormat() << endl << "Leap year: " << (d5.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d5.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #5" << endl;
 	cout << "Month: " << d5.getMonth() << endl;
 	cout << "Day: " << d5.getDay() << endl;
 	cout << "Year: " << d5.getYear() << endl << endl;
-	cout << "Date 6 invalid day:\n" << d6.dateFormat() << endl << "Leap year: " << (d6.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d6.lastDay() << endl << endl;
+	cout << "Date 6 invalid day 5/77/1483:\n" << d6.dateFormat() << endl << "Leap year: " << (d6.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d6.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #6" << endl;
 	cout << "Month: " << d6.getMonth() << endl;
 	cout << "Day: " << d6.getDay() << endl;
 	cout << "Year: " << d6.getYear() << endl << endl;
-	cout << "Date 7 invalid year:\n" << d7.dateFormat() << endl << "Leap year: " << (d7.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d7.lastDay() << endl << endl;
+	cout << "Date 7 invalid year 3/14/-20:\n" << d7.dateFormat() << endl << "Leap year: " << (d7.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d7.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #7" << endl;
 	cout << "Month: " << d7.getMonth() << endl;
 	cout << "Day: " << d7.getDay() << endl;
 	cout << "Year: " << d7.getYear() << endl << endl;
-	cout << "Date 8 invalid leap:\n" << d8.dateFormat() << endl << "Leap year: " << (d8.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d8.lastDay() << endl << endl;
+	cout << "Date 8 invalid leap 2/29/1783:\n" << d8.dateFormat() << endl << "Leap year: " << (d8.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d8.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #8" << endl;
 	cout << "Month: " << d8.getMonth() << endl;
 	cout << "Day: " << d8.getDay() << endl;
 	cout << "Year: " << d8.getYear() << endl << endl;
-	cout << "Date 9 invalid leap:\n" << d9.dateFormat() << endl << "Leap year: " << (d9.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d9.lastDay() << endl << endl;
+	cout << "Date 9 invalid leap 2/29/1900:\n" << d9.dateFormat() << endl << "Leap year: " << (d9.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d9.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #9" << endl;
 	cout << "Month: " << d9.getMonth() << endl;
 	cout << "Day: " << d9.getDay() << endl;
 	cout << "Year: " << d9.getYear() << endl << endl;
-	cout << "Date 10 invalid last day:\n" << d10.dateFormat() << endl << "Leap year: " << (d10.isLeapYear() ? "Yes" : "No") << "Day count of month: " << d10.lastDay() << endl << endl;
+	cout << "Date 10 invalid last day 6/31/2013:\n" << d10.dateFormat() << endl << "Leap year: " << (d10.isLeapYear() ? "Yes" : "No") << endl << "Day count of month: " << d10.lastDay() << endl << endl;
 	cout << "Accessor test with our Date #4" << endl;
 	cout << "Month: " << d10.getMonth() << endl;
 	cout << "Day: " << d10.getDay() << endl;
 	cout << "Year: " << d10.getYear() << endl << endl;
-
+	cout << "--------------------------------------------------------------------------------------------" << endl;
 	//set date tests
 
 	cout << "Mutator Tests" << endl;
-	cout << "Valid" << endl;
-	d2.setDate(2, 28, 2028);
+	cout << "Valid Date 2/29/2028" << endl;
+	d2.setDate(2, 29, 2028);
 	cout << "Month: " << d2.getMonth() << endl;
-	cout << "Day: " << d2.getMonth() << endl;
-	cout << "Year: " << d2.getMonth() << endl << endl;
-	cout << "Date 2 valid date:\n" << d2.dateFormat() << endl << endl;
+	cout << "Day: " << d2.getDay() << endl;
+	cout << "Year: " << d2.getYear() << endl << endl;
+	cout << "Valid date:\n" << d2.dateFormat() << endl << endl;
 
+	cout << "Invalid Date 6/31/2000" << endl;
+	d2.setDate(6, 31, 2000);
+	cout << "Month: " << d2.getMonth() << endl;
+	cout << "Day: " << d2.getDay() << endl;
+	cout << "Year: " << d2.getYear() << endl << endl;
+	cout << "Valid date:\n" << d2.dateFormat() << endl << endl;
+
+	cout << "Invalid Date 13/31/2002" << endl;
+	d2.setDate(13, 31, 2002);
+	cout << "Month: " << d2.getMonth() << endl;
+	cout << "Day: " << d2.getDay() << endl;
+	cout << "Year: " << d2.getYear() << endl << endl;
+	cout << "Valid date:\n" << d2.dateFormat() << endl << endl;
+
+	cout << "Invalid Date 2/31/2000" << endl;
+	d2.setDate(2, 31, 2000);
+	cout << "Month: " << d2.getMonth() << endl;
+	cout << "Day: " << d2.getDay() << endl;
+	cout << "Year: " << d2.getYear() << endl << endl;
+	cout << "Valid date:\n" << d2.dateFormat() << endl << endl;
+
+	cout << "Invalid Date 9/37/2000" << endl;
+	d2.setDate(9, 37, 2000);
+	cout << "Month: " << d2.getMonth() << endl;
+	cout << "Day: " << d2.getDay() << endl;
+	cout << "Year: " << d2.getYear() << endl << endl;
+	cout << "Valid date:\n" << d2.dateFormat() << endl << endl;
+
+	cout << "Invalid date 2/29/1900" << endl;
+	d2.setDate(2, 29, 1900);
+	cout << "Month: " << d2.getMonth() << endl;
+	cout << "Day: " << d2.getDay() << endl;
+	cout << "Year: " << d2.getYear() << endl << endl;
+	cout << "Invalid date:\n" << d2.dateFormat() << endl << endl;
 	cout << "--------------------------------------------------------------------------------------------" << endl;
-	cout << "Invalid" << endl;
-	d2.setDate(2, 28, 1900);
-	cout << "Month: " << d2.getMonth() << endl;
-	cout << "Day: " << d2.getMonth() << endl;
-	cout << "Year: " << d2.getMonth() << endl << endl;
-	cout << "Date 2 valid date:\n" << d2.dateFormat() << endl << endl;
-
 	//overload functions test
 	cout << "Testing overloaded functions:\n" << endl;
 	cout << "isLeapYear(2000): " << (d9.isLeapYear(2000) ? "Yes" : "No") << endl;

@@ -9,19 +9,15 @@ Date::Date(int m, int d, int y)
 }
 void Date::setDate(int m, int d, int y)
 {
+	month = m;
+	day = d;
+	year = y;
 	if (m < 1 || m > 12 || d < 1 || d > lastDay() || y < 1 || y > 9999)
 	{
 		month = 1;
 		day = 1;
 		year = 1900; 
 	}
-	else
-	{
-		month = m;
-		day = d;
-		year = y;
-	}
-
 }
 int Date::getMonth() const
 {
