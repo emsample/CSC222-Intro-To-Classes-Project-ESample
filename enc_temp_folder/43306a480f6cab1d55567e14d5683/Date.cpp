@@ -15,12 +15,6 @@ void Date::setDate(int m, int d, int y)
 		day = 1;
 		year = 1900; 
 	}
-	else
-	{
-		month = m;
-		day = d;
-		year = y;
-	}
 
 }
 int Date::getMonth() const
