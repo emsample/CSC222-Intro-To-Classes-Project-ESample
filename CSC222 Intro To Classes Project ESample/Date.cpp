@@ -1,5 +1,7 @@
 #include "Date.h"
 #include <iostream>
+#include <iomanip>
+#include <sstream>
 
 Date::Date(int m = 1, int d = 1, int y = 1900)
 {
@@ -48,7 +50,7 @@ int Date::lastDay(int month, int year) const
 	{
 		return 31;
 	}
-	else if (month == 4 || month == 6 || month == 9 || month == 11 || )
+	else if (month == 4 || month == 6 || month == 9 || month == 11)
 	{
 		return 30;
 	}
@@ -65,4 +67,15 @@ bool Date::isLeapYear(int year) const
 		return true;
 	else
 		return false;
+}
+string Date::dateFormat(int month, int day, int year)
+{
+	string monthname[12] = { "January", "February", "March", "April",
+		"May", "June", "July", "August",
+		"September", "October", "November", "December" };
+	stringstream dateprint;
+	dateprint << setw(2) << setfill('0') << month << '/' << setw(2) << setfill('0') << day << '/' << setw(2) << setfill('0') << year << endl
+		<< monthname[month] << setw(2) << setfill('0') << day << ', ' << setw(2) << setfill('0') << year << endl
+		<< setw(2) << setfill('0') << day << monthname[month] << setw(2) << setfill('0') << year;
+	return dateprint.str();
 }

@@ -20,6 +20,8 @@ public:
 	int lastDay(int month, int year) const;
 	
 	void setDate(int m, int d, int y);
+
+	string dateFormat(int month, int day, int year);
 private:
 	int month;
 	int day;
