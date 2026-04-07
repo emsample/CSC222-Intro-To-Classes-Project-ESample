@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <sstream>
 
-Date::Date(int m = 1, int d = 1, int y = 1900)
+Date::Date(int m, int d, int y)
 {
 	setDate(m, d, y);
 }
@@ -11,9 +11,9 @@ void Date::setDate(int m, int d, int y)
 {
 	if (month < 1 || month > 12 || day < 1 || day < lastDay(month, year) || year < 1)
 	{
-		month = m;
-		day = d;
-		year = y; 
+		month = 1;
+		day = 1;
+		year = 1900; 
 	}
 
 }
@@ -74,8 +74,8 @@ string Date::dateFormat(int month, int day, int year)
 		"May", "June", "July", "August",
 		"September", "October", "November", "December" };
 	stringstream dateprint;
-	dateprint << setw(2) << setfill('0') << month << '/' << setw(2) << setfill('0') << day << '/' << setw(2) << setfill('0') << year << endl
-		<< monthname[month] << setw(2) << setfill('0') << day << ', ' << setw(2) << setfill('0') << year << endl
-		<< setw(2) << setfill('0') << day << monthname[month] << setw(2) << setfill('0') << year;
+	dateprint << setw(2) << setfill('0') << month << '/' << setw(2) << setfill('0') << day << '/' << setw(4) << setfill('0') << year << endl
+		<< monthname[month] << setw(2) << setfill('0') << day << ', ' << setw(4) << setfill('0') << year << endl
+		<< setw(2) << setfill('0') << day << monthname[month] << setw(4) << setfill('0') << year;
 	return dateprint.str();
 }
