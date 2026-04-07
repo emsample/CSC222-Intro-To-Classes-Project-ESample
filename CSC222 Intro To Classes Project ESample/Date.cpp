@@ -84,7 +84,7 @@ string Date::dateFormat() const
 		"September", "October", "November", "December" };
 	stringstream dateprint;
 	dateprint << setw(2) << setfill('0') << month << '/' << setw(2) << setfill('0') << day << '/' << setw(4) << setfill('0') << year << endl
-		<< monthname[month] << setw(2) << setfill('0') << day << ', ' << setw(4) << setfill('0') << year << endl
-		<< setw(2) << setfill('0') << day << monthname[month] << setw(4) << setfill('0') << year;
+		<< monthname[month-1] << setw(2) << setfill('0') << day << ', ' << setw(4) << setfill('0') << year << endl
+		<< setw(2) << setfill('0') << day << monthname[month-1] << setw(4) << setfill('0') << year;
 	return dateprint.str();
 }
