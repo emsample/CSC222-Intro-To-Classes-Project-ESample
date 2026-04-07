@@ -9,7 +9,7 @@ Date::Date(int m, int d, int y)
 }
 void Date::setDate(int m, int d, int y)
 {
-	if (month < 1 || month > 12 || day < 1 || day < lastDay(month, year) || year < 1)
+	if (m < 1 || m > 12 || d < 1 || d < lastDay() || y < 1 || y > 9999)
 	{
 		month = 1;
 		day = 1;
@@ -37,7 +37,7 @@ int Date::lastDay(int month, int year) const
 {
 	if (month == 2)
 	{
-		if (!isLeapYear(year))
+		if (!isLeapYear())
 		{
 			return 28;
 		}
