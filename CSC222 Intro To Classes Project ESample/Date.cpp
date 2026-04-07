@@ -31,7 +31,7 @@ int Date::getYear() const
 }
 int Date::lastDay() const
 {
-	lastDay(month, year);
+	return lastDay(month, year);
 }
 int Date::lastDay(int month, int year) const
 {
@@ -57,7 +57,16 @@ int Date::lastDay(int month, int year) const
 }
 bool Date::isLeapYear() const
 {
-	isLeapYear(year);
+	if (!isLeapYear(year))
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	;
+
 }
 bool Date::isLeapYear(int year) const
 {
