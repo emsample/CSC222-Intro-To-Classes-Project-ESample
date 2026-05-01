@@ -129,7 +129,69 @@ int main()
 	cout << "lastDay(2, 1600): " << d9.lastDay(2, 1600) << endl;
 	cout << "lastDay(12, 2025): " << d9.lastDay(12, 2025) << endl;
 	
+	cout << "\n===== OPERATOR TESTS =====\n\n";
 
+	// SUBTRACTION
+	Date s1(4, 18, 2014);
+	Date s2(4, 10, 2014);
+
+	cout << "Subtraction test:\n";
+	cout << s1 << " - " << s2 << " = " << (s1 - s2) << " days\n\n";
+
+
+	// PREFIX TEST
+	cout << "PREFIX TEST\n";
+
+	Date p(2, 29, 2008);
+
+	cout << "Original: " << p << endl;
+	cout << "Returned from ++p: " << ++p << endl;
+	cout << "After ++p: " << p << endl;
+
+	cout << "Returned from --p: " << --p << endl;
+	cout << "After --p: " << p << endl << endl;
+
+
+	// POSTFIX TEST
+	cout << "POSTFIX TEST\n";
+
+	Date q(2, 29, 2008);
+
+	cout << "Original: " << q << endl;
+	cout << "Returned from q++: " << q++ << endl;
+	cout << "After q++: " << q << endl;
+
+	cout << "Returned from q--: " << q-- << endl;
+	cout << "After q--: " << q << endl << endl;
+
+
+	// YEAR BOUNDARY TEST
+	cout << "YEAR BOUNDARY TEST\n";
+
+	Date y(12, 31, 2024);
+
+	cout << "Original: " << y << endl;
+	cout << "y++: " << y++ << endl;
+	cout << "After y++: " << y << endl;
+
+	cout << "--y: " << --y << endl;
+	cout << "After --y: " << y << endl << endl;
+
+
+	// STREAM INPUT TEST
+	cout << "STREAM INPUT TEST\n";
+
+	Date input;
+	cin >> input;
+
+	cout << "You entered: " << input << endl;
+
+	cout << "\nSTREAM OUTPUT TEST\n";
+
+	Date outTest(3, 15, 2025);
+
+	cout << "Using cout << date:\n";
+	cout << outTest << endl;
 
 	return 0;
 

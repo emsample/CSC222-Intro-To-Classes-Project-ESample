@@ -123,3 +123,99 @@ void Date::subtractOneDay()
 		day = lastDay();
 	}
 }
+Date& Date::operator++()
+{
+	addOneDay();
+	return *this;
+}
+
+Date Date::operator++(int)
+{
+	Date temp = *this;
+	addOneDay();
+	return temp;
+}
+
+Date& Date::operator--()
+{
+	subtractOneDay();
+	return *this;
+}
+
+Date Date::operator--(int)
+{
+	Date temp = *this;
+	subtractOneDay();
+	return temp;
+}
+
+int Date::daysFromStart() const
+{
+	int total = 0;
+
+	for (int y = 1; y < year; y++)
+	{
+		if (isLeapYear(y))
+		{
+			total += 366;
+		}
+		else
+		{
+			total += 365;
+		}
+	}
+
+	for (int m = 1; m < month; m++)
+	{
+		total += lastDay(m, year);
+	}
+
+	total += day;
+
+	return total;
+}
+
+int Date::operator-(const Date& other) const
+{
+	int difference = daysFromStart() - other.daysFromStart();
+
+	if (difference < 0)
+	{
+		difference = -difference;
+	}
+
+	return difference;
+}
+
+ostream& operator<<(ostream& out, const Date& date)
+{
+	string monthname[12] = { "January", "February", "March", "April",
+		"May", "June", "July", "August",
+		"September", "October", "November", "December" };
+
+	out << monthname[date.month - 1] << " "
+		<< date.day << ", "
+		<< date.year;
+
+	return out;
+}
+
+istream& operator>>(istream& in, Date& date)
+{
+	int m;
+	int d;
+	int y;
+
+	cout << "Enter month: ";
+	in >> m;
+
+	cout << "Enter day: ";
+	in >> d;
+
+	cout << "Enter year: ";
+	in >> y;
+
+	date.setDate(m, d, y);
+
+	return in;
+}
