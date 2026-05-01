@@ -190,6 +190,7 @@ int main()
 
 	Date outTest(3, 15, 2025);
 
+	cout << "Expected (manual): March 15, 2025" << endl;
 	cout << "Using cout << date:\n";
 	cout << outTest << endl;
 
