@@ -90,3 +90,36 @@ string Date::dateFormat() const
 		<< setw(2) << setfill('0') << day << " " << monthname[month - 1] << " " << setw(4) << setfill('0') << year;
 	return dateprint.str();
 }
+void Date::addOneDay()
+{
+	day++;
+
+	if (day > lastDay())
+	{
+		day = 1;
+		month++;
+
+		if (month > 12)
+		{
+			month = 1;
+			year++;
+		}
+	}
+}
+void Date::subtractOneDay()
+{
+	day--;
+
+	if (day < 1)
+	{
+		month--;
+
+		if (month < 1)
+		{
+			month = 12;
+			year--;
+		}
+
+		day = lastDay();
+	}
+}

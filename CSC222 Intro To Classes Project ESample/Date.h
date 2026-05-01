@@ -22,9 +22,22 @@ public:
 	void setDate(int m, int d, int y);
 
 	string dateFormat() const;
+	Date& operator++();
+	Date operator++(int);
+
+	Date& operator--();
+	Date operator--(int);
+
+	int operator-(const Date& other) const;
+
+	friend ostream& operator<<(ostream& out, const Date& date);
+	friend istream& operator>>(istream& in, Date& date);
 private:
 	int month;
 	int day;
 	int year;
+	int daysFromStart() const;
+	void addOneDay();
+	void subtractOneDay();
 };
 #endif
